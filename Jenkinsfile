@@ -13,7 +13,7 @@ pipeline {
                 git branch: 'master', url: "${GIT_REPO}"
             }
         }
-        stage('Build') {
+     stage('Build') {
             steps {
                 sh 'mvn clean package -DskipTests'
             }
