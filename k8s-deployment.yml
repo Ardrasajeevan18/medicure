@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: project3-deployment
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: project3
+  template:
+    metadata:
+      labels:
+        app: project3
+    spec:
+      containers:
+      - name: project3-container
+        image: ardra771/project3:latest
+        ports:
+        - containerPort: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: project3-service
+spec:
+  selector:
+    app: project3
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8080
+  type: LoadBalancer
