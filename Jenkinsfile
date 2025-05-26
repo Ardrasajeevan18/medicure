@@ -17,6 +17,13 @@ pipeline {
             steps {
                 sh 'mvn clean package -DskipTests'
             }
+       stage('Build') {
+           steps {
+                sh 'mvn clean package -DskipTests'
+                sh 'ls -l target/'   // Check if jar exists here
+              }
+           }
+ 
         }
         stage('Docker Build & Push') {
             steps {
