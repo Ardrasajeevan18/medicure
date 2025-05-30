@@ -3,8 +3,8 @@ pipeline {
 
     environment {
         DOCKERHUB_CREDENTIALS = 'dockerhub-credentials'
-        DOCKER_IMAGE = "ardra771/project3"
-        GIT_REPO = "https://github.com/Ardrasajeevan18/project3.git"
+        DOCKER_IMAGE = "ardra771/medicure:v1"
+        GIT_REPO = "https://github.com/Ardrasajeevan18/medicure.git"
     }
 
     stages {
