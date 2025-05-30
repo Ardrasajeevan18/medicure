@@ -15,6 +15,7 @@ spec:
       containers:
       - name: medicure-container
         image: ardra771/medicure.v1
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
 ---
